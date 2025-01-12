@@ -1,4 +1,4 @@
-# Curriculum Learning-Based Trajectory Valuation (CLTV)
+## Curriculum Learning-Based Trajectory Valuation (CLTV)
 
 ## Setup
 
