@@ -1,0 +1,36 @@
+#!/bin/bash
+#SBATCH --job-name=501_HCH_ABS_PAIR_IQ_
+#SBATCH --output=./logs/halfcheetah/TrajV_IQ_output_%A_%a.out
+#SBATCH --error=./logs/halfcheetah/TrajV_IQ_error_%A_%a.err
+#SBATCH --nodelist=gpunode01
+#SBATCH --mem=40G
+#SBATCH --nodes=1
+#SBATCH --cpus-per-task=16
+#SBATCH --gpus=1
+#SBATCH --time=40-0
+
+source /opt/conda/etc/profile.d/conda.sh
+conda activate cltv
+
+
+
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types medium-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.0 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types medium-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.2 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types medium-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.4 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types medium-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.6 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types medium-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.8 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types medium-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 1.0 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.0 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.2 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.4 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.6 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.8 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 expert-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 1.0 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 medium-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.0 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 medium-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.2 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 medium-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.4 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 medium-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.6 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 medium-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 0.8 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+python3 experiment.py --gpu 0 --env halfcheetah --dataset_types random-v2 medium-v2 --dataset_ratios 0.9 0.1 --project Ablation_PairImpact_501 --baseline iql --method pairimpact --delta 1.0 --lmd 0.0 0.2 0.4 0.6 0.8 1.0 --seed 501 &
+
+wait

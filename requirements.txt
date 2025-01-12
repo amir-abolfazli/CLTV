@@ -1,0 +1,12 @@
+mujoco-py<2.2,>=2.1
+torch
+pandas
+matplotlib
+gym==0.23.1
+gym[mujoco]
+d3rlpy==1.1.1
+d4rl==1.1
+wandb
+protobuf==3.20.*
+UtilsRL
+scikit-learn
