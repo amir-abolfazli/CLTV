@@ -105,24 +105,6 @@ PairImpact
 sbatch reproduction/scripts/Ablation_Study/PairImpact/Seed_500/abs_pairImpact_ant_cql.sh
 ```
 
-### Tables and Plots
-
-To produce table 1:
-```bash
-jupyter notebook reproduction/Table_Results.ipynb
-```
-To produce figure 1, 2, 3:
-```bash
-jupyter notebook reproduction/Learning_Curves.ipynb
-```
-To produce figure 4:
-```bash
-jupyter notebook reproduction/Runtime_Analysis.ipynb
-```
-To produce figure 5:
-```bash
-jupyter notebook reproduction/Ablation_Study.ipynb
-```
 
 ## Acknowledgments
 
