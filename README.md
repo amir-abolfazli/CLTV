@@ -15,7 +15,7 @@ Create Docker container.
 ```bash
 docker create -it --gpus 'all' --name <container name> -v <path/to/project>:/CLTV <docker image name> bash
 ```
-Start container in interative mode.
+Start container in interactive mode.
 ```bash
 docker start -i <docker container name>
 ```
